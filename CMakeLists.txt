@@ -11,7 +11,10 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 file(GLOB_RECURSE SOURCES "src/*.cpp" "src/*.asm")
 
-add_executable(TrustMe WIN32 ${SOURCES})
+add_executable(TrustMe WIN32 
+    ${SOURCES}
+    ${RESOURCES}
+)
 
 target_link_libraries(TrustMe gdi32 user32 advapi32 wininet)
 
